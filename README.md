@@ -17,6 +17,29 @@ React + Javascript + Bootstrap 5
 
 ## Directives Copilot
 
-> Create the base files needed for a React + Javascript + Bootstrap 5.3 frontend project. Setup should be as simple as possible.
+Create the base files needed for a React + Javascript + Bootstrap 5.3 frontend project. Setup should be as simple as possible.
 
-Il a créé une base mais certaines de fichiers sont écrits à l'envers, avec les imports à la fin. J'ai pu faire un npm install et la compilation webpack marche du premier coup. J'ai mettre à l'endroit index.js et App.js, et renommer App.js en App.jsx.
+> Il a créé une base mais certaines de fichiers sont écrits à l'envers, avec les imports à la fin. J'ai pu faire un npm install et la compilation webpack marche du premier coup. J'ai mettre à l'endroit index.js et App.js, et renommer App.js en App.jsx.
+
+Knowing we are using bootstrap 5, display a giant welcome text in the center of the screen. It should adapt to desktop and mobile display. Prepare the fact that we will be able to switch from dark to light mode.
+
+> OK
+
+At page load, and each time the "reload" button on app is pressed, fetch a joke on the joke API. You should create a separate file for the joke service, to respect separation of concern. 
+
+Here is an exemple of the joke API : 
+
+fetch('https://v2.jokeapi.dev/joke/Any')
+  .then(response => response.json())
+  .then(data => {
+    console.log(`Joke: ${data.joke}`);
+  });
+
+
+And here is the URL you should use : https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,racist,sexist&type=single
+
+> OK
+
+Replace the big welcome text with the loaded joke
+
+> OK
