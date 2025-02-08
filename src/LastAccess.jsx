@@ -39,7 +39,7 @@ const LastAccess = () => {
   }, []);
 
   return (
-    <div className="mb-3">
+    <div className="mb-3 text-center">
       <h5>{message}</h5>
       <small>Last visited: {relative}</small>
     </div>

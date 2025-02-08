@@ -75,3 +75,9 @@ Create a new component that display the relative time since the user last access
 Please refactor the LastAccess component so the funny messages and their delay are stored in an external json file. Create a service for last access, similar to cat and jokeService for loading the messages with fetch.
 
 > J'ai du modifier le chemin vers lastAccessConfig.json et rajouter le CopyWebpackPlugin à webpack
+
+Reduse the size of the joke font, and center the last access text. Also make the website dark mode by default.
+
+> OK
+
+Add a new button to add a note, that will display a textarea where the user can leave a note. The content of the note should be save in localStorage and displayed back the user returns.

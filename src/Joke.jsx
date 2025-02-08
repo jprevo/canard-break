@@ -9,6 +9,6 @@ export default function Joke({ reloadKey }) {
   }, [reloadKey]);
 
   return (
-    <h1 className="display-1 text-center">{joke}</h1>
+    <h1 className="display-4 text-center">{joke}</h1>
   );
 }

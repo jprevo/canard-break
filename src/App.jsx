@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import Cat from './Cat';
 import Joke from './Joke';
 import LastAccess from './LastAccess';
+import Note from './Note'; // added Note import
 
 export default function App() {
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
     const [reloadKey, setReloadKey] = useState(0);
 
     const toggleMode = () => setDarkMode(!darkMode);
@@ -20,6 +21,7 @@ export default function App() {
             <Joke reloadKey={reloadKey} />
             <button className="btn btn-secondary mt-4" onClick={toggleMode}>Toggle Mode</button>
             <button className="btn btn-primary mt-2" onClick={reloadContent}>Reload Joke</button>
+            <Note darkMode={darkMode} /> {/* pass darkMode prop */}
         </div>
     );
 }
