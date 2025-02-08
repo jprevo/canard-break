@@ -14,20 +14,13 @@ export default function Note({ darkMode }) { // accept darkMode prop
         setEditing(false);
     };
 
-    const noteStyle = darkMode
-        ? { background: '#343a40', color: '#f8f9fa' }
-        : { background: '#f8f9fa', color: '#212529' };
-    const textareaStyle = darkMode
-        ? { background: '#343a40', color: '#f8f9fa', border: '1px solid #f8f9fa' }
-        : {};
-
     return (
         <div className="mt-3">
             {!editing ? (
                 <>
                     <button className="btn btn-info" onClick={() => setEditing(true)}>Add Note</button>
                     {note && (
-                        <div className="mt-2 p-2 border rounded" style={noteStyle}>
+                        <div className={`mt-2 p-2 border rounded ${darkMode ? 'note-dark' : 'note-light'}`}>
                             {note}
                         </div>
                     )}
@@ -35,9 +28,8 @@ export default function Note({ darkMode }) { // accept darkMode prop
             ) : (
                 <>
                     <textarea
-                        className="form-control"
+                        className={`form-control ${darkMode ? 'textarea-dark' : 'textarea-light'}`}
                         rows="3"
-                        style={textareaStyle}
                         value={note}
                         onChange={(e) => setNote(e.target.value)}
                     />

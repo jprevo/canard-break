@@ -3,6 +3,7 @@ import Cat from './Cat';
 import Joke from './Joke';
 import LastAccess from './LastAccess';
 import Note from './Note'; // added Note import
+import './styles.css'; // import CSS styles
 
 export default function App() {
     const [darkMode, setDarkMode] = useState(true);

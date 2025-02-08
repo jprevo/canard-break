@@ -14,12 +14,7 @@ export default function Cat({ reloadKey }) { // added reloadKey prop
         <img 
           src={catUrl} 
           alt="Random Cat" 
-          style={{
-            maxWidth: '100%',
-            maxHeight: '300px',
-            height: 'auto',
-            objectFit: 'contain'
-          }}
+          className="cat-img" // replaced inline styles with CSS class
         />
       ) : (
         <p>Loading cat image...</p>

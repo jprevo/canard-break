@@ -1,0 +1,26 @@
+.note-light {
+  background: #f8f9fa;
+  color: #212529;
+}
+
+.note-dark {
+  background: #343a40;
+  color: #f8f9fa;
+}
+
+.textarea-light {
+  /* Use default styling from form-control or additional light styles if needed */
+}
+
+.textarea-dark {
+  background: #343a40;
+  color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+}
+
+.cat-img {
+  max-width: 100%;
+  max-height: 300px;
+  height: auto;
+  object-fit: contain;
+}

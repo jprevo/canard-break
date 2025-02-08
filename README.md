@@ -81,3 +81,13 @@ Reduse the size of the joke font, and center the last access text. Also make the
 > OK
 
 Add a new button to add a note, that will display a textarea where the user can leave a note. The content of the note should be save in localStorage and displayed back the user returns.
+
+> OK
+
+Make sure the note reacts to dark and light mode, right now in dark mode it is displayed white on white
+
+> OK
+
+Move any color or raw style to a css stylesheet
+
+> OK
