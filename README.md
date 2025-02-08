@@ -55,3 +55,15 @@ In the same way we created a jokeService, please create a cat service for fetchi
 > OK
 
 The cat is sometimes too big, please make sure it fits nicely in the page. Also, please reload the cat image when pressing the reload button
+
+> OK
+
+Refactor the App component :
+- create a new Joke component
+- load both the cat and the joke in parallel
+
+> Erreur, le chat ne se rafraichit plus
+
+We have an error, the cat is not reloading when pressing the "Reload Joke" button. Please fix.
+
+> OK
