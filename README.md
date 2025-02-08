@@ -71,3 +71,7 @@ We have an error, the cat is not reloading when pressing the "Reload Joke" butto
 Create a new component that display the relative time since the user last accessed the page (you can add new dependencies if needed). This is a website that we access when we need to take a break, so add a small funny message depending on how long the user has last seen the page. Display this component above the cat.
 
 > OK
+
+Please refactor the LastAccess component so the funny messages and their delay are stored in an external json file. Create a service for last access, similar to cat and jokeService for loading the messages with fetch.
+
+> J'ai du modifier le chemin vers lastAccessConfig.json et rajouter le CopyWebpackPlugin à webpack

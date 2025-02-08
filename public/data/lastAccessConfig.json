@@ -1,0 +1,8 @@
+{
+  "default": "Welcome to your break!",
+  "messages": [
+    { "minSeconds": 0, "maxSeconds": 60, "message": "Blink and you missed it!" },
+    { "minSeconds": 60, "maxSeconds": 3600, "message": "Just a short break, huh?" },
+    { "minSeconds": 3600, "maxSeconds": 1000000, "message": "Long time no see! Ready for a break?" }
+  ]
+}

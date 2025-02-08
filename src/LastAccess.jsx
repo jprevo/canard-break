@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
+import fetchLastAccessConfig from './lastAccessService';
 
 dayjs.extend(relativeTime);
 
@@ -11,20 +12,20 @@ const LastAccess = () => {
   useEffect(() => {
     const storedTime = localStorage.getItem('lastAccessTime');
     const now = Date.now();
-    if (storedTime) {
-      const diff = now - parseInt(storedTime, 10);
-      const diffSeconds = diff / 1000;
-      if (diffSeconds < 60) {
-        setMessage("Blink and you missed it!");
-      } else if (diffSeconds < 3600) {
-        setMessage("Just a short break, huh?");
-      } else {
-        setMessage("Long time no see! Ready for a break?");
-      }
-    } else {
-      setMessage("Welcome to your break!");
-    }
     localStorage.setItem('lastAccessTime', now.toString());
+    const diffSeconds = storedTime ? (now - parseInt(storedTime, 10)) / 1000 : 0;
+
+    fetchLastAccessConfig()
+      .then(config => {
+        // Determine message based on elapsed seconds
+        let selected = config.messages.find(
+          m => diffSeconds >= m.minSeconds && diffSeconds < m.maxSeconds
+        );
+        setMessage(selected ? selected.message : config.default);
+      })
+      .catch(() => {
+        setMessage("Welcome to your break!");
+      });
 
     const timer = setInterval(() => {
       if (storedTime) {
