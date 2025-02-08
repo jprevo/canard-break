@@ -67,3 +67,7 @@ Refactor the App component :
 We have an error, the cat is not reloading when pressing the "Reload Joke" button. Please fix.
 
 > OK
+
+Create a new component that display the relative time since the user last accessed the page (you can add new dependencies if needed). This is a website that we access when we need to take a break, so add a small funny message depending on how long the user has last seen the page. Display this component above the cat.
+
+> OK
