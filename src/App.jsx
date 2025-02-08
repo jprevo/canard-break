@@ -1,25 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import fetchJoke from './jokeService';
+import React, { useState } from 'react';
+import Cat from './Cat';
+import Joke from './Joke';
 
 export default function App() {
     const [darkMode, setDarkMode] = useState(false);
-    const [joke, setJoke] = useState('');
+    const [reloadKey, setReloadKey] = useState(0);
 
     const toggleMode = () => setDarkMode(!darkMode);
 
-    const loadJoke = () => {
-        fetchJoke().then(newJoke => setJoke(newJoke));
+    const reloadContent = () => {
+        setReloadKey(prev => prev + 1);
     };
-
-    useEffect(() => {
-        loadJoke();
-    }, []);
 
     return (
         <div className={`container-fluid ${darkMode ? 'bg-dark text-light' : 'bg-light text-dark'} d-flex flex-column justify-content-center align-items-center vh-100`}>
-            <h1 className="display-1 text-center">{joke}</h1>
+            <Cat reloadKey={reloadKey} /> {/* Cat component now refreshes on reloadKey change */}
+            <Joke reloadKey={reloadKey} /> {/* new Joke component */}
             <button className="btn btn-secondary mt-4" onClick={toggleMode}>Toggle Mode</button>
-            <button className="btn btn-primary mt-2" onClick={loadJoke}>Reload Joke</button>
+            <button className="btn btn-primary mt-2" onClick={reloadContent}>Reload Joke</button>
         </div>
     );
 }

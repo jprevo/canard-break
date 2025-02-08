@@ -43,3 +43,15 @@ And here is the URL you should use : https://v2.jokeapi.dev/joke/Programming?bla
 Replace the big welcome text with the loaded joke
 
 > OK
+
+Create a new component that display the image of a cat randomly fetch from the cat API.
+
+Example usage of that cat API :
+
+fetch('https://api.thecatapi.com/v1/images/search') .then(response => response.json()) .then(data => { const imageUrl = data[0].url; console.log(Here's a random cat image: ${imageUrl}); });
+
+In the same way we created a jokeService, please create a cat service for fetching data. Display the cat above the joke.
+
+> OK
+
+The cat is sometimes too big, please make sure it fits nicely in the page. Also, please reload the cat image when pressing the reload button
