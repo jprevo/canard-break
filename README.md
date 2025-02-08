@@ -16,3 +16,7 @@ Le but du site est de proposer une petite page où les gens peuvent prendre un b
 React + Javascript + Bootstrap 5
 
 ## Directives Copilot
+
+> Create the base files needed for a React + Javascript + Bootstrap 5.3 frontend project. Setup should be as simple as possible.
+
+Il a créé une base mais certaines de fichiers sont écrits à l'envers, avec les imports à la fin. J'ai pu faire un npm install et la compilation webpack marche du premier coup. J'ai mettre à l'endroit index.js et App.js, et renommer App.js en App.jsx.
